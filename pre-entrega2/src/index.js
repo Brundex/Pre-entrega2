@@ -20,12 +20,6 @@ mongoose.connect("mongodb+srv://puodziunasb:9xV!wL9VnHeEqg@cluster0.s05wzm8.mong
 
 //Middlewares
 app.use(express.json())
-app.use(session({
-    secret: "coderSecret",
-    resave: true,
-    saveUninitialized: true
-}))
-app.use(cookieParser("claveSecreta"))
 app.engine('handlebars', engine())
 app.set('view engine', 'handlebars')
 app.set('views', __dirname + '/views')
